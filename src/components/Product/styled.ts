@@ -30,3 +30,7 @@ export const Infos = styled.div`
   top: 16px;
   right: 16px;
 `
+export const img = styled.img`
+  width: 222px;
+  height: 250px;
+`

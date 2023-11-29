@@ -1,5 +1,6 @@
 import Tag from '../Tag'
 import { Card, Descricao, Titulo, Infos } from './styled'
+import * as S from './styled'
 
 type Props = {
   title: string
@@ -19,7 +20,7 @@ const Product = ({
   image
 }: Props) => (
   <Card>
-    <img src={image} alt={title} />
+    <S.img src={image} alt={title} />
     <Infos>
       {infos.map((info) => (
         <Tag key={info}>{info}</Tag>
