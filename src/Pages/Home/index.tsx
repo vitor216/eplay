@@ -71,7 +71,7 @@ const EmBreve: Game[] = [
     description:
       'Descobre as maravilhas épicas da Fronteira Ocidental, um continente de Pandora nunca antes visto. Viaja através das suas regiões belas e imprevisíveis em mundo aberto onde baixar as defesas pode ser um erro fatal.',
     title: 'Saint Seiya: Soldiers',
-    system: ',PS4,PS5, X-Box',
+    system: 'PS4,PS5, X-Box',
     infos: ['10%', 'R$ 159,99'],
     image: cavalheiros
   },

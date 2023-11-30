@@ -20,6 +20,11 @@ import need from '../../assets/images/Need.png'
 import bomba from '../../assets/images/SuperBombaPatch2024.png'
 import NBA from '../../assets/images/NBA.png'
 import MXGP from '../../assets/images/MXGP.png'
+import shadow from '../../assets/images/shadow.png'
+import Frostpunk from '../../assets/images/Frostpunk.png'
+import Civilization from '../../assets/images/Civilization.png'
+import Desperados from '../../assets/images/Desperados.png'
+import outriders from '../../assets/images/Outriders.png'
 
 const Acao: Game[] = [
   {
@@ -48,7 +53,7 @@ const Acao: Game[] = [
     description:
       'Em Street Fighter 6, jogadores poderão testar suas habilidades no mundo inteiro em busca de sua força pessoal.',
     title: 'Mortal Kombat 1',
-    system: 'PS5,',
+    system: 'PS5',
     infos: ['10%', 'R$ 285,63'],
     image: mortal
   },
@@ -56,11 +61,11 @@ const Acao: Game[] = [
     id: 4,
     category: 'Ação',
     description:
-      'Treinado desde criança e com habilidades, força e reflexos a um nível sobrehumano, os witchers são a única defesa da humanidade contra um mundo infestado por monstros. Destrói criaturas horríveis na pele de um caçador de monstros armado com várias armas melhoráveis, poções de mutações e magia de combate.',
-    title: 'The Witcher 3: Wild Hunt',
+      'Outriders vai contar a história de um futuro alternativo no qual a sociedade esgota os recursos da Terra e se vê obrigada a emigrar para outro planeta habitável. Uma guerra sangrenta marca a despedida da humanidade do nosso planeta, e os traumas ainda estão vivos quando os colonizadores chegaram em sua nova casa, Enoch.',
+    title: 'Outriders',
     system: 'PS5, X-box, Windows',
-    infos: ['10%', 'R$ 207,90'],
-    image: thewitcher
+    infos: ['10%', 'R$ 107,45'],
+    image: outriders
   }
 ]
 
@@ -71,7 +76,7 @@ const Arcade: Game[] = [
     description:
       'Em Street Fighter 6, jogadores poderão testar suas habilidades no mundo inteiro em busca de sua força pessoal.',
     title: 'Street Fighter™ 6',
-    system: 'PS4, PS5,',
+    system: 'PS4, PS5',
     infos: ['10%', 'R$ 279,50'],
     image: streetfighter
   },
@@ -81,7 +86,7 @@ const Arcade: Game[] = [
     description:
       'é um jogo de ação e aventura desenvolvido pela Next Level Games e publicado pela Nintendo para o Nintendo Switch. É a sequencia de Luigi Mansion: Dark Moon e a terceira parcela da série Luigi´s Mansion, e foi lançado mundialmente em 31 de outubro de 2019.',
     title: 'Luigi Mansion 3 - Nintendo Switch',
-    system: ',Nintendo',
+    system: 'Nintendo',
     infos: ['10%', 'R$ 289,89'],
     image: mario03
   },
@@ -167,7 +172,7 @@ const Aventura: Game[] = [
     description:
       'Descobre as maravilhas épicas da Fronteira Ocidental, um continente de Pandora nunca antes visto. Viaja através das suas regiões belas e imprevisíveis em mundo aberto onde baixar as defesas pode ser um erro fatal.',
     title: 'Saint Seiya: Soldiers',
-    system: ',PS4,PS5, X-Box',
+    system: 'PS4,PS5, X-Box',
     infos: ['10%', 'R$ 159,99'],
     image: cavalheiros
   },
@@ -210,7 +215,7 @@ const Esportes: Game[] = [
     description:
       'Jogue as melhores ligas e campeonatos de futebol de todos os paises, com os melhores jogadores.',
     title: 'super bomba patch 2024',
-    system: ',PS4,PS5, X-Box',
+    system: 'PS4,PS5, X-Box',
     infos: ['10%', 'R$ 59,99'],
     image: bomba
   },
@@ -236,6 +241,49 @@ const Esportes: Game[] = [
   }
 ]
 
+const Estrategia: Game[] = [
+  {
+    id: 21,
+    category: 'Estrategia',
+    description:
+      'A furtividade é a arma mais mortal de um ninja, e para avançar no mundo do Japão feudal você precisará de habilidades afiadas para derrotar um lorde guerreiro impiedoso.',
+    title: 'Shadow Tactics: Blades of the Shogun',
+    system: 'PS5',
+    infos: ['10%', 'R$ 195,90'],
+    image: shadow
+  },
+  {
+    id: 22,
+    category: 'Estrategia',
+    description:
+      'Um complexo desafio estratégico e um enredo opulento que te levam até à revolução industrial do século XIX virada do avesso: Frostpunk conta a história do misterioso congelamento do planeta Terra, que levou ao fim da civilização que conhecemos e forçou a humanidade a adaptar-se a condições extremas. Enquanto líder do que pode ser a última sociedade civilizada na Terra, terás de construir a cidade onde moram os sobreviventes, descobrir novas tecnologias, explorar desertos de gelo e, principalmente, gerir e governar a sociedade, preparando-a para a vida num mundo impiedoso.',
+    title: 'Frostpunk: Console Edition',
+    system: 'PS5, X-Box',
+    infos: ['10%', 'R$ 159,99'],
+    image: Frostpunk
+  },
+  {
+    id: 23,
+    category: 'Estrategia',
+    description:
+      'uma das mais aclamadas e influentes séries na história dos jogos de estratégia. Escolhe um de vários líderes e segue agendas inspiradas pelas suas personalidades reais. Explora novos territórios, desenvolve tecnologia e enfrenta líderes históricos enquanto lideras a tua civilização ao longo das eras. As cidades expandem-se fisicamente pelo mapa, criando novas possibilidades estratégicas no jogo enquanto tentas alcançar uma das várias condições de vitória e construir um império que resista ao passar do tempo.',
+    title: 'Sid Meier Civilization® VI Platinum Edition',
+    system: 'PS5',
+    infos: ['10%', 'R$ 264,99'],
+    image: Civilization
+  },
+  {
+    id: 24,
+    category: 'Estrategia',
+    description:
+      'Nesta aguardada pré-sequência do adorado clássico Desperados: Wanted Dead or Alive, John Cooper une forças com a noiva fugitiva Kate, o matador misterioso Doc McCoy, o caçador gigante Hector e Isabelle, uma dama enigmática de Nova Orleans. Em sua jornada por redenção, as aventuras de Cooper e seu grupo os levarão a cidades rurais, pântanos, margens de rios e, finalmente, a um confronto dramático digno de lendas do faroeste.',
+    title: 'Desperados III',
+    system: 'PS5, X-box',
+    infos: ['10%', 'R$ 184,30'],
+    image: Desperados
+  }
+]
+
 const Categories = () => (
   <>
     <ProductsList games={Acao} title="Ações" background="gray" />
@@ -243,6 +291,7 @@ const Categories = () => (
     <ProductsList games={RPG} title="RPG" background="gray" />
     <ProductsList games={Aventura} title="Aventura" background="black" />
     <ProductsList games={Esportes} title="Esportes" background="gray" />
+    <ProductsList games={Estrategia} title="Estratégia" background="black" />
   </>
 )
 
