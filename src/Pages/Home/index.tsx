@@ -11,7 +11,7 @@ import streetfighter from '../../assets/images/Street_Fighter_6.png'
 import thewitcher from '../../assets/images/the-witcher-3.png'
 import mario01 from '../../assets/images/Mario01.png'
 
-const Promocoes: Game[] = [
+const Destaques: Game[] = [
   {
     id: 1,
     category: 'Ação',
@@ -100,7 +100,7 @@ const EmBreve: Game[] = [
 const Home = () => (
   <>
     <Banner />
-    <ProductsList games={Promocoes} title="Promoções" background="gray" />
+    <ProductsList games={Destaques} title="Destaques" background="gray" />
     <ProductsList games={EmBreve} title="Em breve" background="black" />
   </>
 )

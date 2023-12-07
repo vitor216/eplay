@@ -18,7 +18,7 @@ const Header = () => (
             <Link to="/Novidades">Novidades</Link>
           </LinkItem>
           <LinkItem>
-            <a href="#">Promoções</a>
+            <Link to="/Promocoes">Promoções</Link>
           </LinkItem>
         </Links>
       </nav>
