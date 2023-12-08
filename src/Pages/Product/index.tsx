@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import Hero from '../../components/Hero'
 import Section from '../../components/Section'
 import Gallery from '../../components/Gallery'
-import hogwartsimg5 from '../../assets/images/hogwartsimg5.png'
+import hogwarts from '../../assets/images/Hogwarts.png'
 const Product = () => {
   const { id } = useParams()
 
@@ -36,7 +36,7 @@ const Product = () => {
           jogo.
         </p>
       </Section>
-      <Gallery name="Hogwarts Legacy" defautCover={hogwartsimg5} />
+      <Gallery name="Hogwarts Legacy" defaultCover={hogwarts} />
     </>
   )
 }
