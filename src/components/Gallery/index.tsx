@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import Section from '../Section'
+import { GalleryItem } from '../../Pages/Home'
 import { Item, Items, Action, Modal, ModalContent } from './styles'
 
+import Section from '../Section'
 import hogwartsimg1 from '../../assets/images/hogwartsimg1.png'
 import hogwartsimg2 from '../../assets/images/hogwartsimg2.png'
 import hogwartsimg3 from '../../assets/images/hogwartsimg3.png'
@@ -13,38 +14,33 @@ import PlayImg from '../../assets/images/botao-play.svg'
 import ZoomImg from '../../assets/images/mais-zoom.svg'
 import Fechar from '../../assets/images/close 1.svg'
 
-interface GalleryItem {
-  type: 'imagem' | 'video'
-  url: string
-}
-
 const mock: GalleryItem[] = [
   {
-    type: 'imagem',
+    type: 'image',
     url: hogwartsimg1
   },
   {
-    type: 'imagem',
+    type: 'image',
     url: hogwartsimg2
   },
   {
-    type: 'imagem',
+    type: 'image',
     url: hogwartsimg3
   },
   {
-    type: 'imagem',
+    type: 'image',
     url: hogwartsimg4
   },
   {
-    type: 'imagem',
+    type: 'image',
     url: hogwartsimg5
   },
   {
-    type: 'imagem',
+    type: 'image',
     url: hogwartsimg6
   },
   {
-    type: 'imagem',
+    type: 'image',
     url: hogwartsimg7
   },
   {
@@ -65,24 +61,24 @@ interface ModalState extends GalleryItem {
 const Gallery = ({ defaultCover, name }: Props) => {
   const [Modall, setModall] = useState<ModalState>({
     EstaVisivel: false,
-    type: 'imagem',
+    type: 'image',
     url: ''
   })
 
-  const getMidiaCover = (item: GalleryItem) => {
-    if (item.type === 'imagem') return item.url
+  const getMediaCover = (item: GalleryItem) => {
+    if (item.type === 'image') return item.url
     return defaultCover
   }
 
-  const getMidiaIcon = (item: GalleryItem) => {
-    if (item.type === 'imagem') return ZoomImg
+  const getMediaIcon = (item: GalleryItem) => {
+    if (item.type === 'image') return ZoomImg
     return PlayImg
   }
 
   const closeModal = () => {
     setModall({
       EstaVisivel: false,
-      type: 'imagem',
+      type: 'image',
       url: ''
     })
   }
@@ -91,24 +87,24 @@ const Gallery = ({ defaultCover, name }: Props) => {
     <>
       <Section title="Galeria" background="black">
         <Items>
-          {mock.map((midia, index) => (
+          {mock.map((media, index) => (
             <Item
-              key={midia.url}
+              key={media.url}
               onClick={() => {
                 setModall({
                   EstaVisivel: true,
-                  type: midia.type,
-                  url: midia.url
+                  type: media.type,
+                  url: media.url
                 })
               }}
             >
               <img
-                src={getMidiaCover(midia)}
+                src={getMediaCover(media)}
                 alt={`Midia ${index + 1} de ${name}`}
               />
               <Action>
                 <img
-                  src={getMidiaIcon(midia)}
+                  src={getMediaIcon(media)}
                   alt="Clique para maximizar a midia"
                 />
               </Action>
@@ -128,7 +124,7 @@ const Gallery = ({ defaultCover, name }: Props) => {
               }}
             />
           </header>
-          {Modall.type === 'imagem' ? (
+          {Modall.type === 'image' ? (
             <img src={Modall.url} />
           ) : (
             <iframe frameBorder={0} src={Modall.url} />
