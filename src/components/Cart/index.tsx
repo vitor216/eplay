@@ -7,54 +7,59 @@ import {
   Quantity,
   CartItem
 } from './styles'
-import starwars from '../../assets/images/star_wars.png'
 import Tag from '../Tag'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootReducer } from '../../store'
+import { close, remove } from '../../store/reducers/cart'
+import { formataPreco } from '../ProductsList'
 
-const Cart = () => (
-  <CartContainer>
-    <Overlay />
-    <Sidebar>
-      <ul>
-        <CartItem>
-          <img src={starwars} />
-          <div>
-            <h3>Nome do Jogo</h3>
-            <Tag>RPG</Tag>
-            <Tag>PS5</Tag>
-            <span>R$ 150,00</span>
-          </div>
-          <button type="button" />
-        </CartItem>
-        <CartItem>
-          <img src={starwars} />
-          <div>
-            <h3>Nome do Jogo</h3>
-            <Tag>RPG</Tag>
-            <Tag>PS5</Tag>
-            <span>R$ 150,00</span>
-          </div>
-          <button type="button" />
-        </CartItem>
-        <CartItem>
-          <img src={starwars} />
-          <div>
-            <h3>Nome do Jogo</h3>
-            <Tag>RPG</Tag>
-            <Tag>PS5</Tag>
-            <span>R$ 150,00</span>
-          </div>
-          <button type="button" />
-        </CartItem>
-      </ul>
-      <Quantity>2 Jogo(s) no Carrinho</Quantity>
-      <Prices>
-        Total de R$ 250,00 <span>Em até 6x sem juros</span>
-      </Prices>
-      <Button title="Clique aqui para continuar com a compra" type="button">
-        Continuar com a compra
-      </Button>
-    </Sidebar>
-  </CartContainer>
-)
+const Cart = () => {
+  const { isOpen, items } = useSelector((state: RootReducer) => state.cart)
+
+  const dispatch = useDispatch()
+  const CloseCart = () => {
+    dispatch(close())
+  }
+
+  const getTotalPrice = () => {
+    return items.reduce((acumulador, valorAtual) => {
+      return (acumulador += valorAtual.prices.current!)
+    }, 0)
+  }
+
+  const removeItem = (id: number) => {
+    dispatch(remove(id))
+  }
+
+  return (
+    <CartContainer className={isOpen ? 'is-open' : ''}>
+      <Overlay onClick={CloseCart} />
+      <Sidebar>
+        <ul>
+          {items.map((Item) => (
+            <CartItem key={Item.id}>
+              <img src={Item.media.thumbnail} alt={Item.name} />
+              <div>
+                <h3>{Item.name}</h3>
+                <Tag>{Item.details.category}</Tag>
+                <Tag>{Item.details.system}</Tag>
+                <span>{formataPreco(Item.prices.current)}</span>
+              </div>
+              <button onClick={() => removeItem(Item.id)} type="button" />
+            </CartItem>
+          ))}
+        </ul>
+        <Quantity>{items.length} Jogo(s) no Carrinho</Quantity>
+        <Prices>
+          Total de {formataPreco(getTotalPrice())}{' '}
+          <span>Em até 6x sem juros</span>
+        </Prices>
+        <Button title="Clique aqui para continuar com a compra" type="button">
+          Continuar com a compra
+        </Button>
+      </Sidebar>
+    </CartContainer>
+  )
+}
 
 export default Cart

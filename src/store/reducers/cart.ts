@@ -3,10 +3,12 @@ import { Game } from '../../Pages/Home'
 
 type CartState = {
   items: Game[]
+  isOpen: boolean
 }
 
 const initialState: CartState = {
-  items: []
+  items: [],
+  isOpen: false
 }
 
 const CartSlice = createSlice({
@@ -14,10 +16,24 @@ const CartSlice = createSlice({
   initialState,
   reducers: {
     add: (state, action: PayloadAction<Game>) => {
-      state.items.push(action.payload)
+      const game = state.items.find((Item) => Item.id === action.payload.id)
+      if (!game) {
+        state.items.push(action.payload)
+      } else {
+        alert('O jogo já está no Carrinho')
+      }
+    },
+    remove: (state, action: PayloadAction<number>) => {
+      state.items = state.items.filter((Item) => Item.id !== action.payload)
+    },
+    open: (state) => {
+      state.isOpen = true
+    },
+    close: (state) => {
+      state.isOpen = false
     }
   }
 })
 
-export const { add } = CartSlice.actions
+export const { add, open, close, remove } = CartSlice.actions
 export default CartSlice.reducer
