@@ -36,16 +36,16 @@ const Cart = () => {
       <Overlay onClick={CloseCart} />
       <Sidebar>
         <ul>
-          {items.map((Item) => (
-            <CartItem key={Item.id}>
-              <img src={Item.media.thumbnail} alt={Item.name} />
+          {items.map((item) => (
+            <CartItem key={item.id}>
+              <img src={item.media.thumbnail} alt={item.name} />
               <div>
-                <h3>{Item.name}</h3>
-                <Tag>{Item.details.category}</Tag>
-                <Tag>{Item.details.system}</Tag>
-                <span>{formataPreco(Item.prices.current)}</span>
+                <h3>{item.name}</h3>
+                <Tag>{item.details.category}</Tag>
+                <Tag>{item.details.system}</Tag>
+                <span>{formataPreco(item.prices.current)}</span>
               </div>
-              <button onClick={() => removeItem(Item.id)} type="button" />
+              <button onClick={() => removeItem(item.id)} type="button" />
             </CartItem>
           ))}
         </ul>

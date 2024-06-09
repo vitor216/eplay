@@ -16,7 +16,7 @@ const CartSlice = createSlice({
   initialState,
   reducers: {
     add: (state, action: PayloadAction<Game>) => {
-      const game = state.items.find((Item) => Item.id === action.payload.id)
+      const game = state.items.find((item) => item.id === action.payload.id)
       if (!game) {
         state.items.push(action.payload)
       } else {
@@ -24,7 +24,7 @@ const CartSlice = createSlice({
       }
     },
     remove: (state, action: PayloadAction<number>) => {
-      state.items = state.items.filter((Item) => Item.id !== action.payload)
+      state.items = state.items.filter((item) => item.id !== action.payload)
     },
     open: (state) => {
       state.isOpen = true

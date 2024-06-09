@@ -5,6 +5,7 @@ import Categories from './Pages/Categories'
 import Novidades from './Pages/Novidades'
 import Promocoes from './Pages/Promocoes'
 import Product from './Pages/Product'
+import Checkout from './Pages/Checkout'
 
 const Rotas = () => (
   <Routes>
@@ -13,6 +14,7 @@ const Rotas = () => (
     <Route path="/Novidades" element={<Novidades />} />
     <Route path="/Promocoes" element={<Promocoes />} />
     <Route path="/Product/:id" element={<Product />} />
+    <Route path="/Checkout" element={<Checkout />} />
   </Routes>
 )
 
