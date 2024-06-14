@@ -57,3 +57,6 @@ export const TabButton = styled.button<TabButtonProps>`
     margin-right: 8px;
   }
 `
+export const MensagemError = styled.small`
+  color: red;
+`
