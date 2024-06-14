@@ -9,32 +9,62 @@ const Footer = () => (
         <SectionTitle>Categorias</SectionTitle>
         <Links>
           <li>
-            <Link to="/categories#action">Ação</Link>
+            <Link
+              title="clique aqui para acessar jogos de ação"
+              to="/categories#action"
+            >
+              Ação
+            </Link>
           </li>
         </Links>
         <Links>
           <li>
-            <Link to="/categories#fight">Lutas</Link>
+            <Link
+              title="clique aqui para acessar jogos de lutas"
+              to="/categories#fight"
+            >
+              Lutas
+            </Link>
           </li>
         </Links>
         <Links>
           <li>
-            <Link to="/categories#fight2">Lutas2</Link>
+            <Link
+              title="clique aqui para acessar jogos de lutas2"
+              to="/categories#fight2"
+            >
+              Lutas2
+            </Link>
           </li>
         </Links>
         <Links>
           <li>
-            <Link to="/categories#rpg">RPG</Link>
+            <Link
+              title="clique aqui para acessar jogos de Rpg"
+              to="/categories#rpg"
+            >
+              RPG
+            </Link>
           </li>
         </Links>
         <Links>
           <li>
-            <Link to="/categories#sports">Esportes</Link>
+            <Link
+              title="clique aqui para acessar jogos de esportes"
+              to="/categories#sports"
+            >
+              Esportes
+            </Link>
           </li>
         </Links>
         <Links>
           <li>
-            <Link to="/categories#simulation">Simulação</Link>
+            <Link
+              title="clique aqui para acessar jogos de simulação"
+              to="/categories#simulation"
+            >
+              Simulação
+            </Link>
           </li>
         </Links>
       </FooterSection>
@@ -42,17 +72,29 @@ const Footer = () => (
         <SectionTitle>Acesso rápido</SectionTitle>
         <Links>
           <li>
-            <Link to="#">Novidades</Link>
+            <Link title="clique aqui para acessar a seção de novidades" to="#">
+              Novidades
+            </Link>
           </li>
         </Links>
         <Links>
           <li>
-            <Link to="/#on-sale">Promoções</Link>
+            <Link
+              title="clique aqui para acessar a seção de Promoções"
+              to="/#on-sale"
+            >
+              Promoções
+            </Link>
           </li>
         </Links>
         <Links>
           <li>
-            <Link to="/#coming-soon">Em brve</Link>
+            <Link
+              title="clique aqui para acessar a seção de em breve"
+              to="/#coming-soon"
+            >
+              Em brve
+            </Link>
           </li>
         </Links>
       </FooterSection>

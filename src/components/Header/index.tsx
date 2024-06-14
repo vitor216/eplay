@@ -38,13 +38,28 @@ const Header = () => {
           <nav>
             <Links>
               <LinkItem>
-                <Link to="/categories">Categorias</Link>
+                <Link
+                  title="clique aqui para acessar a página de categorias"
+                  to="/categories"
+                >
+                  Categorias
+                </Link>
               </LinkItem>
               <LinkItem>
-                <Link to="/Novidades">Novidades</Link>
+                <Link
+                  title="clique aqui para acessar a página de novidades"
+                  to="/Novidades"
+                >
+                  Novidades
+                </Link>
               </LinkItem>
               <LinkItem>
-                <Link to="/Promocoes">Promoções</Link>
+                <Link
+                  title="clique aqui para acessar a página de promoções"
+                  to="/Promocoes"
+                >
+                  Promoções
+                </Link>
               </LinkItem>
             </Links>
           </nav>
@@ -57,13 +72,31 @@ const Header = () => {
       <NavMobile className={isMenuOpen ? 'is-open' : ''}>
         <Links>
           <LinkItem>
-            <Link to="/categories">Categorias</Link>
+            <Link
+              title="clique aqui para acessar a página de categorias"
+              to="/categories"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Categorias
+            </Link>
           </LinkItem>
           <LinkItem>
-            <Link to="/Novidades">Novidades</Link>
+            <Link
+              title="clique aqui para acessar a página de novidades"
+              to="/Novidades"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Novidades
+            </Link>
           </LinkItem>
           <LinkItem>
-            <Link to="/Promocoes">Promoções</Link>
+            <Link
+              title="clique aqui para acessar a página de promoções"
+              to="/Promocoes"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Promoções
+            </Link>
           </LinkItem>
         </Links>
       </NavMobile>
