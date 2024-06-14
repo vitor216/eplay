@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { formataPreco } from '../ProductsList'
+import { formataPreco } from '../../utils'
 import Button from '../Button'
 import Tag from '../Tag'
 import { RootReducer } from '../../store'
